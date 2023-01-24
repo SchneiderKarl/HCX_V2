@@ -1,0 +1,14 @@
+{
+    "REMOTE_SOURCE_GRANTOR_UPS": {
+        "object_owner": {
+            "roles": [
+                "HC_SHAREDSERVICES::grantor_role_g","SYSHDL_I531155_SOURCE::grantor_role_g","SYSHDL_I531155_ROLE"
+            ]
+        },
+        "application_user": {
+            "roles": [
+                "HC_SHAREDSERVICES::grantor_role","SYSHDL_I531155_SOURCE::grantor_role","SYSHDL_I531155_ROLE"
+            ]
+        }
+    }
+}

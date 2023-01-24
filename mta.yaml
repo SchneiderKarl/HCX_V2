@@ -1,5 +1,5 @@
 _schema-version: "2.1"
-ID: HCX_V2
+ID: HCX_V2_I531155
 version: 0.0.1
 modules:
 - name: db
@@ -9,8 +9,19 @@ modules:
   - name: hdi_db
     properties:
       TARGET_CONTAINER: ~{hdi-container-name}
+  - name: cross-container-service-1
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: ServiceName_1
+      service: ~{the-service-name}
 resources:
 - name: hdi_db
   type: com.sap.xs.hdi-container
   properties:
     hdi-container-name: ${service-name}
+- name: cross-container-service-1
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: REMOTE_SOURCE_GRANTOR_UPS
+  properties:
+    the-service-name: ${service-name}
