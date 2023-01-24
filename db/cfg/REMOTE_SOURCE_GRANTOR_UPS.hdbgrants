@@ -2,12 +2,12 @@
     "REMOTE_SOURCE_GRANTOR_UPS": {
         "object_owner": {
             "roles": [
-                "HC_SHAREDSERVICES::grantor_role_g","SYSHDL_I531155_SOURCE::grantor_role_g","SYSHDL_I531155_ROLE"
+                "HCX_HANA::grantor_role_g","SYSHDL_HCX_SOURCE::grantor_role_g","SYSHDL_HCX_ROLE"
             ]
         },
         "application_user": {
             "roles": [
-                "HC_SHAREDSERVICES::grantor_role","SYSHDL_I531155_SOURCE::grantor_role","SYSHDL_I531155_ROLE"
+                "HCX_HANA::grantor_role","SYSHDL_HCX_SOURCE::grantor_role","SYSHDL_HCX_ROLE"
             ]
         }
     }
