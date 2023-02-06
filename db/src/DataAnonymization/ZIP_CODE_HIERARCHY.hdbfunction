@@ -1,0 +1,9 @@
+FUNCTION "hcx.db.DataAnonymization::ZIP_CODE_HIERARCHY"(value varchar(255), LEVEL integer) 
+  RETURNS outValue varchar(255) AS charsToShow integer DEFAULT 0;
+BEGIN charsToShow := length(value) - LEVEL;
+  outValue := rpad(
+    substring(value, 1, charsToShow),
+    charsToShow + LEVEL,
+    '*'
+  );
+END;

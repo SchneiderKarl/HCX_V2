@@ -1,19 +1,20 @@
 {
-    "role": {
-        "name": "default_access_role",
-        "schema_privileges": [
-            {
-                "privileges": [
-                    "DELETE",
-                    "CREATE TEMPORARY TABLE",
-                    "EXECUTE",
-                    "INSERT",
-                    "SELECT",
-                    "SELECT CDS METADATA",
-                    "UPDATE",
-                    "ALTER"//added
-                ]
-            }
-        ]
-    }
+  "role": {
+      "name": "default_access_role",
+      "schema_privileges": [
+          {
+              "privileges": [
+                  "DELETE",
+                  "CREATE TEMPORARY TABLE",
+                  "EXECUTE",
+                  "INSERT",
+                  "SELECT",
+                  "SELECT CDS METADATA",
+                  "UPDATE",
+                  "ALTER"//added
+              ]
+          }
+      ]
+      //,"object_privileges": [{"name": "hcx.db.DataAnonymization::SALARYANON", "privileges": ["UNMASKED"], "type": "VIEW"},{"name": "hcx.db.DataAnonymization::SALARYANON_DP", "privileges": ["UNMASKED"], "type": "VIEW"}]
+  }
 }

@@ -1,0 +1,24 @@
+FUNCTION "hcx.db.DataAnonymization::START_YEAR_GROUP_HIERARCHY"(value nvarchar(100), LEVEL integer) 
+  RETURNS outValue varchar(100) 
+  LANGUAGE SQLSCRIPT 
+  SQL SECURITY INVOKER AS 
+BEGIN
+  DECLARE start_year integer;
+  start_year := TO_INTEGER(value);
+  IF (LEVEL = 0) THEN outValue := value;
+  ELSEIF (LEVEL = 1) THEN IF (start_year <= 1990) THEN outValue := '1986-1990';
+  ELSEIF (start_year <= 1995) THEN outValue := '1991-1995';
+  ELSEIF (start_year <= 2000) THEN outValue := '1996-2000';
+  ELSEIF (start_year <= 2005) THEN outValue := '2001-2005';
+  ELSEIF (start_year <= 2010) THEN outValue := '2006-2010';
+  ELSEIF (start_year <= 2015) THEN outValue := '2011-2015';
+  ELSEIF (start_year <= 2020) THEN outValue := '2016-2020';
+END IF;
+ELSEIF (LEVEL = 2) THEN IF (start_year <= 1990) THEN outValue := '1986-1990';
+ELSEIF (start_year <= 2000) THEN outValue := '1991-2000';
+ELSEIF (start_year <= 2010) THEN outValue := '2001-2010';
+ELSEIF (start_year <= 2020) THEN outValue := '>2010';
+END IF;
+ELSEIF (LEVEL = 3) THEN outValue := '*';
+END IF;
+END
