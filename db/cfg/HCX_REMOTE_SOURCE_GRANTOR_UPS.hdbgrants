@@ -1,5 +1,5 @@
 {
-    "REMOTE_SOURCE_GRANTOR_UPS": {
+    "HCX_REMOTE_SOURCE_GRANTOR_UPS": {
         "object_owner": {
             "roles": [
                 "HCX_HANA::grantor_role_g","SYSHDL_HCX_SOURCE::grantor_role_g","SYSHDL_HCX_ROLE"
