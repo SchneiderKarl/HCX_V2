@@ -22,6 +22,6 @@ resources:
   - name: cross-container-service-1
     type: org.cloudfoundry.existing-service
     parameters:
-      service-name: REMOTE_SOURCE_GRANTOR_UPS
+      service-name: HCX_REMOTE_SOURCE_GRANTOR_UPS
     properties:
       the-service-name: '${service-name}'
